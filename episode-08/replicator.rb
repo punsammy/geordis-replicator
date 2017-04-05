@@ -32,6 +32,7 @@ class Replicator
   end
 
   def transport_ingredients_to_glass
+
     return unless glass_in_tummy
 
     @recipe.ingredients.each do |ingredient_name|
