@@ -33,7 +33,6 @@ class Replicator
 
   def transport_ingredients_to_glass
     return unless glass_in_tummy
-
     @recipe.ingredients.each do |ingredient_name|
       @enterprise.transporter.energize(obj: @enterprise.pantry.find_ingredient(ingredient_name), from: @enterprise.pantry.shelf, to: glass_in_tummy.inside)
     end
@@ -68,13 +67,10 @@ class Replicator
       number_of_adjustments += 1
 
     end
-
     @enterprise.transporter.energize(obj: glass_in_reactor_core, from: @enterprise.reactor.core, to: @tummy)
-
   end
 
   def transport_glass_to_replicator_plate
-    return
     @enterprise.transporter.energize(obj: glass_in_tummy, from: @tummy, to: @plate)
   end
 
