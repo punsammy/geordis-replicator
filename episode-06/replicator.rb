@@ -70,11 +70,11 @@ class Replicator
     end
 
     @enterprise.transporter.energize(obj: glass_in_reactor_core, from: @enterprise.reactor.core, to: @tummy)
-
   end
 
   def transport_glass_to_replicator_plate
     @enterprise.transporter.energize(obj: glass_in_tummy, from: @tummy, to: @plate)
+
   end
 
 end

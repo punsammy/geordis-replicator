@@ -1,3 +1,4 @@
+require 'pry'
 class Reactor
 
   attr_reader :core, :on
@@ -51,7 +52,7 @@ class Reactor
 
   def cool_items_in_core
     @core.contents.each do |item|
-      item.temperature -= 1 if draw_power(20)
+      item.temperature -= 1 if draw_power(2)
     end
   end
 
